@@ -15,6 +15,7 @@ const canonical = site + path;
 const nav = [
   { href: '/', label: '首頁' },
   ...data.categories.map((c) => ({ href: `/${c.slug}/`, label: c.title })),
+  { href: '/slash/', label: '斜槓人生' },
 ];
 ---
 
@@ -261,6 +262,20 @@ const nav = [
       .card .count { font-weight: 800; color: var(--brand); font-size: 16px; }
       .card .more { color: var(--brand-dark); font-weight: 700; }
 
+      /* ===== 斜槓人生橫幅 ===== */
+      .slash-banner {
+        display: flex; align-items: center; gap: 18px;
+        margin: 8px 0 34px; padding: 22px 26px;
+        background: linear-gradient(120deg, #7c2d12 0%, #c2410c 55%, #ea580c 100%);
+        border-radius: var(--radius); color: #fff; text-decoration: none;
+        box-shadow: 0 10px 24px rgba(124, 45, 18, 0.28);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      .slash-banner:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(124, 45, 18, 0.34); }
+      .slash-icon { font-size: 44px; line-height: 1; flex-shrink: 0; }
+      .slash-text h2 { color: #fff; font-size: 22px; margin: 0 0 6px; }
+      .slash-text p { color: #ffedd5; font-size: 15px; margin: 0; }
+
       /* ===== TOP5 表格 ===== */
       .tablewrap {
         overflow-x: auto;
@@ -411,7 +426,7 @@ const nav = [
         header.site .wrap { gap: 10px; }
         .brand { font-size: 20px; }
         .tagline { display: none; }
-        nav.main a { padding: 4px 10px; font-size: 14px; }
+        nav.main a { padding: 4px 8px; font-size: 13px; }
         .panel-body { padding: 4px 14px 12px; }
       }
     </style>
