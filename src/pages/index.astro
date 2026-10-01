@@ -27,6 +27,7 @@ const jsonld = {
   jsonld={jsonld}
 >
   <div class="hero">
+    <img class="hero-img" src="/img/hero-mascot.jpg" alt="台客秋吉祥物：戴墨鏡的台客大叔拿著優惠券，背景有外送機車、計程車與飛機" fetchpriority="high" />
     <h1>{data.homeSeo.h1}</h1>
     <p class="lede">
       台客秋是阿叔每月親手更新的優惠碼整理小站。Uber Eats 優惠碼、foodpanda
@@ -73,6 +74,7 @@ const jsonld = {
   <div class="cards">
     {data.categories.map((c) => (
       <a class="card" href={`/${c.slug}/`}>
+        <img class="card-img" src={`/img/cat-${c.slug}.jpg`} alt={`${c.title}吉祥物插畫`} loading="lazy" />
         <div class="icon">{icons[c.slug] || '🎁'}</div>
         <h2>{c.title}</h2>
         <p>{c.intro}</p>
@@ -99,3 +101,16 @@ const jsonld = {
     每月更新，優惠碼點了直接連官方 App 或官網使用。
   </p>
 </Layout>
+
+<style>
+  .hero-img {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 14px; margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(124, 45, 18, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.35);
+  }
+  .card-img {
+    display: block; width: calc(100% + 36px); aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 9px 9px 0 0; margin: -20px -18px 12px;
+  }
+</style>
