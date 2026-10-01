@@ -36,7 +36,7 @@ const jsonld = {
     </p>
     <div class="chips">
       {data.categories.map((c) => (
-        <span class="chip">{icons[c.slug] || '🎁'} {c.title} {c.dealCount} 檔</span>
+        <span class={`chip cat-${c.slug}`}>{icons[c.slug] || '🎁'} {c.title} {c.dealCount} 檔</span>
       ))}
     </div>
     <p class="pick">
@@ -73,7 +73,7 @@ const jsonld = {
   <h2 class="plat">三大專區</h2>
   <div class="cards">
     {data.categories.map((c) => (
-      <a class="card" href={`/${c.slug}/`}>
+      <a class={`card cat-${c.slug}`} href={`/${c.slug}/`}>
         <img class="card-img" src={`/img/cat-${c.slug}.jpg`} alt={`${c.title}吉祥物插畫`} loading="lazy" />
         <div class="icon">{icons[c.slug] || '🎁'}</div>
         <h2>{c.title}</h2>
