@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DealCard from '../components/DealCard.astro';
+import data from '../data/promos.json';
+
+export function getStaticPaths() {
+  return data.categories.map((c) => ({ params: { category: c.slug } }));
+}
+
+const { category } = Astro.params;
+const cat = data.categories.find((c) => c.slug === category);
+if (!cat) throw new Error('unknown category: ' + category);
+---
+
+<Layout
+  title={cat.seo.seoTitle}
+  description={cat.seo.seoDesc}
+  path={`/${cat.slug}/`}
+>
+  <h1>{cat.seo.h1}</h1>
+  <p class="lede">{cat.seo.intro_seo}</p>
+  <p style="font-size:14px;color:#78716c">
+    共 {cat.dealCount} 檔優惠｜最後更新：{data.updated}
+  </p>
+
+  {cat.platforms.map((pf: any) => (
+    <>
+      <h2 class="plat">{pf.name} 優惠</h2>
+      {pf.sections.map((sec: any) => (
+        <>
+          <h3 class="sec">■ {sec.title}</h3>
+          {sec.deals.map((d: any) => (
+            <DealCard deal={d} aff={pf.aff || ''} />
+          ))}
+        </>
+      ))}
+    </>
+  ))}
+
+  <p style="margin-top:28px;font-size:14px;color:#a8a29e">
+    想看其他優惠？去 <a href="/">台客秋首頁</a> 逛逛，
+    {data.categories.filter((c) => c.slug !== cat.slug).map((c, i, arr) => (
+      <>
+        <a href={`/${c.slug}/`}>{c.title}</a>{i < arr.length - 1 ? '、' : ''}
+      </>
+    ))} 專區。
+  </p>
+</Layout>
