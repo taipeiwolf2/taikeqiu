@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const EMAIL = '7096lin@gmail.com';
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: '關於台客秋',
+  url: 'https://taikeqiu.pages.dev/about/',
+  description:
+    '台客秋是阿叔每月親手更新的優惠碼整理小站。品牌合作邀約請來信 7096lin@gmail.com。',
+};
+---
+
+<Layout
+  title="關於台客秋｜優惠碼整理小站・品牌合作聯絡"
+  description="台客秋是阿叔每月親手更新的優惠碼整理小站：外送、叫車、旅遊優惠碼通通幫你挖出來。品牌合作邀約請來信 7096lin@gmail.com。"
+  path="/about/"
+  jsonld={jsonld}
+>
+  <img class="about-img" src="/img/hero-mascot.jpg" alt="台客秋吉祥物：戴墨鏡、掛金項鍊、穿粉紅夏威夷花襯衫的台客大叔" fetchpriority="high" />
+
+  <h1>關於台客秋</h1>
+  <p class="lede">
+    台客秋是阿叔每月親手更新的優惠碼整理小站。墨鏡、金項鍊、花襯衫那位就是阿叔本人——專門在網路上幫大家挖優惠碼，挖到一個是一個，挖到就跟大家分享。
+  </p>
+
+  <section class="panel">
+    <h2 class="plat">這站做什麼</h2>
+    <div class="panel-body">
+      <p>
+        外送、叫車、旅遊三大專區：Uber Eats 優惠碼、foodpanda 優惠碼、外送免運、叫車搭車金、KKday 優惠碼、Klook 優惠碼、Agoda 訂房優惠、Trip.com 折扣碼，通通整理在這裡——點了就有省，免驚踩雷。
+      </p>
+      <p>
+        阿叔另外開了一個「<a href="/slash/">斜槓人生</a>」專區，幫想跑外送兼差賺外快的人整理 Uber Eats、foodpanda、Lalamove 的申請懶人包：資格、文件、流程、新手獎金一次看懂。
+      </p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="plat">優惠怎麼整理</h2>
+    <div class="panel-body">
+      <p>
+        優惠碼都是阿叔親手一檔一檔整理、每月更新。價格標示幣別、每晚或總價、含稅或未稅、取消條件都寫清楚；有疊加優惠的會標示為估算，讓你下單前心裡有數。
+      </p>
+      <p>
+        活動條件隨時可能變動，一律以各平台官方公告或 App 內顯示為準。阿叔會盡量即時更新，但下單前還是自己再確認一次，比較保險啦。
+      </p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="plat">品牌合作邀約</h2>
+    <div class="panel-body">
+      <p>
+        歡迎外送、叫車、旅遊相關品牌、平台、店家來談合作：優惠活動曝光、專屬優惠碼、聯盟行銷分潤，都可以聊。阿叔講義氣，條件好談，來信講清楚就好。
+      </p>
+      <p class="contact">
+        <a class="mailbtn" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      </p>
+      <p class="fineprint">來信請簡單說明品牌名稱、合作形式與聯絡人，阿叔會親自回信。</p>
+    </div>
+  </section>
+
+  <p class="xlink">
+    想挖優惠？回 <a href="/">台客秋首頁</a> 看最新整理。
+  </p>
+</Layout>
+
+<style>
+  .about-img {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 14px; margin: 0 0 18px;
+    box-shadow: 0 8px 24px rgba(124, 45, 18, 0.18);
+  }
+  .contact { margin: 16px 0 8px; }
+  .mailbtn {
+    display: inline-block; background: var(--brand); color: #fff;
+    font-weight: 800; font-size: 17px; padding: 12px 26px;
+    border-radius: 999px; text-decoration: none;
+    box-shadow: 0 4px 14px rgba(194, 90, 20, 0.35);
+  }
+  .mailbtn:hover { background: var(--brand-deep); }
+</style>
