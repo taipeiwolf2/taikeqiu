@@ -46,6 +46,28 @@ def count_deals(page):
     return sum(len(s["deals"]) for pf in page["platforms"] for s in pf["sections"])
 
 
+AUTO_PATH = os.path.expanduser("~/workspace/deals-sync/auto_deals.json")
+
+
+def load_auto():
+    if not os.path.exists(AUTO_PATH):
+        return {}
+    with open(AUTO_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def merge_auto(page, key, auto):
+    """把 auto_deals.json 的自動抓取優惠併入各平台，獨立「自動更新」區塊"""
+    plat_map = auto.get(key, {})
+    if not plat_map:
+        return
+    for pf in page["platforms"]:
+        deals = plat_map.get(pf["name"])
+        if not deals:
+            continue
+        pf["sections"].append({"title": "自動更新", "deals": deals})
+
+
 def main():
     out = {
         "site": {"name": SITE["name"], "source_name": SITE["source_name"]},
@@ -55,7 +77,9 @@ def main():
         "categories": [],
     }
     total = 0
+    auto = load_auto()
     for key, page in (("delivery", DELIVERY), ("taxi", TAXI), ("travel", TRAVEL)):
+        merge_auto(page, key, auto)
         n = count_deals(page)
         total += n
         out["categories"].append({
