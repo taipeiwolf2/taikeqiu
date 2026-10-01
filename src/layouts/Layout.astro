@@ -1,0 +1,311 @@
+---
+// 台客秋共用版型：SEO meta、導覽、頁尾、複製碼小工具
+import data from '../data/promos.json';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  jsonld?: Record<string, unknown>;
+}
+
+const { title, description, path = '/', jsonld } = Astro.props;
+const site = 'https://taikeqiu.pages.dev';
+const canonical = site + path;
+const nav = [
+  { href: '/', label: '首頁' },
+  ...data.categories.map((c) => ({ href: `/${c.slug}/`, label: c.title })),
+];
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#c2410c" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="台客秋" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {jsonld && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+    )}
+    <style>
+      :root {
+        --brand: #c2410c;
+        --brand-light: #fff7ed;
+        --brand-border: #fdba74;
+        --ink: #3f3f3f;
+        --muted: #78716c;
+        --faint: #a8a29e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font: 16px/1.9 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        background: #fffdf9;
+      }
+      a { color: var(--brand); }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+      /* 頁首 */
+      header.site {
+        background: var(--brand);
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      header.site .wrap {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .brand {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 800;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      nav.main { display: flex; gap: 4px; flex-wrap: wrap; }
+      nav.main a {
+        color: #ffedd5;
+        text-decoration: none;
+        padding: 4px 12px;
+        border-radius: 8px;
+        font-size: 15px;
+        white-space: nowrap;
+      }
+      nav.main a:hover, nav.main a[aria-current="page"] {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+      }
+
+      main .wrap { padding-top: 8px; padding-bottom: 32px; }
+      h1 { color: var(--brand); font-size: 26px; margin: 22px 0 8px; }
+      h2.plat {
+        color: var(--brand);
+        font-size: 22px;
+        margin: 34px 0 10px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid var(--brand-border);
+      }
+      h3.sec { color: var(--brand); font-size: 18px; margin: 24px 0 6px; }
+      .lede { font-size: 17px; color: #57534e; }
+
+      /* 優惠卡 */
+      .deal {
+        padding: 12px 2px;
+        border-bottom: 1px dashed var(--brand-border);
+        overflow-wrap: anywhere;
+      }
+      .deal:last-child { border-bottom: none; }
+      .badge {
+        display: inline-block;
+        background: var(--brand);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 1px 10px;
+        margin-right: 6px;
+        line-height: 1.9;
+      }
+      .deal .codes { margin-top: 4px; }
+      .codebtn {
+        display: inline-block;
+        background: var(--brand-light);
+        border: 1px solid var(--brand-border);
+        color: var(--brand);
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 2px 14px;
+        margin: 6px 8px 2px 0;
+        line-height: 1.9;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      a.codebtn:hover { background: #ffedd5; }
+      .copy {
+        border: 1px solid #e7e5e4;
+        background: #fff;
+        color: var(--muted);
+        border-radius: 8px;
+        padding: 2px 10px;
+        margin: 6px 0 2px -2px;
+        font-size: 13px;
+        cursor: pointer;
+        line-height: 1.9;
+        vertical-align: top;
+      }
+      .copy:hover { border-color: var(--brand-border); color: var(--brand); }
+      .deal .desc { margin: 6px 0; }
+      .deal .meta { color: var(--muted); font-size: 14px; }
+      .go {
+        display: inline-block;
+        margin-top: 8px;
+        color: var(--brand);
+        font-weight: 700;
+        text-decoration: none;
+        border: 1px solid var(--brand-border);
+        border-radius: 8px;
+        padding: 1px 14px;
+        background: var(--brand-light);
+        line-height: 1.9;
+      }
+      .go:hover { background: #ffedd5; }
+
+      /* 首頁 */
+      .hero {
+        background: linear-gradient(135deg, #fff7ed, #ffedd5);
+        border: 1px solid var(--brand-border);
+        border-radius: 14px;
+        padding: 22px 22px 18px;
+        margin: 18px 0 8px;
+      }
+      .hero h1 { margin: 0 0 6px; font-size: 30px; }
+      .hero p { margin: 6px 0; }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .card {
+        display: block;
+        border: 1px solid var(--brand-border);
+        border-radius: 12px;
+        padding: 16px;
+        text-decoration: none;
+        color: var(--ink);
+        background: #fff;
+      }
+      .card:hover { background: var(--brand-light); }
+      .card h2 { color: var(--brand); font-size: 19px; margin: 0 0 4px; border: none; padding: none; }
+      .card p { margin: 4px 0; font-size: 14px; color: var(--muted); }
+      .card .count { font-weight: 700; color: var(--brand); }
+      table.top5 {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ffedd5;
+        border-radius: 10px;
+        overflow: hidden;
+        font-size: 15px;
+      }
+      table.top5 th {
+        background: var(--brand);
+        color: #fff;
+        padding: 10px 12px;
+        text-align: left;
+        white-space: nowrap;
+      }
+      table.top5 td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #ffedd5;
+        vertical-align: top;
+      }
+      table.top5 tr:nth-child(even) td { background: var(--brand-light); }
+      table.top5 tr:last-child td { border-bottom: none; }
+      .rank {
+        display: inline-block;
+        min-width: 28px;
+        text-align: center;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 50%;
+        line-height: 28px;
+      }
+      .tablewrap { overflow-x: auto; }
+
+      /* 頁尾 */
+      footer.site {
+        border-top: 1px solid #ffedd5;
+        color: var(--faint);
+        font-size: 13px;
+        line-height: 2;
+        text-align: center;
+        padding: 20px 16px 28px;
+      }
+
+      @media (max-width: 640px) {
+        body { font-size: 15px; }
+        h1 { font-size: 23px; }
+        h2.plat { font-size: 19px; margin-top: 26px; }
+        h3.sec { font-size: 17px; }
+        .codebtn { font-size: 16px; }
+        .cards { grid-template-columns: 1fr; }
+        .hero h1 { font-size: 25px; }
+        header.site .wrap { gap: 10px; }
+        .brand { font-size: 19px; }
+        nav.main a { padding: 4px 8px; font-size: 14px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/">台客秋</a>
+        <nav class="main" aria-label="主導覽">
+          {nav.map((n) => (
+            <a
+              href={n.href}
+              aria-current={Astro.url.pathname === n.href ? 'page' : undefined}
+            >
+              {n.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <p>{data.footer}</p>
+        <p>資料來源：各平台公開優惠資訊整理｜最後更新：{data.updated}｜© 台客秋</p>
+      </div>
+    </footer>
+    <script is:inline>
+      // 優惠碼一鍵複製（漸進增強，不影響 SEO）
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('.copy');
+        if (!b) return;
+        var done = function () {
+          var old = b.textContent;
+          b.textContent = '已複製！';
+          setTimeout(function () { b.textContent = old; }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(b.getAttribute('data-code')).then(done, done);
+        } else {
+          var t = document.createElement('textarea');
+          t.value = b.getAttribute('data-code');
+          document.body.appendChild(t);
+          t.select();
+          try { document.execCommand('copy'); } catch (err) {}
+          document.body.removeChild(t);
+          done();
+        }
+      });
+    </script>
+  </body>
+</html>
