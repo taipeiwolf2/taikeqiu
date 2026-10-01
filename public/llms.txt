@@ -1,0 +1,24 @@
+# 台客秋
+
+> 台客秋是台灣的外送、叫車、旅遊優惠碼整理小站，每月更新。吉祥物是戴墨鏡、掛金項鍊、穿粉紅夏威夷花襯衫的台客大叔。
+
+## 這站做什麼
+- 整理各平台最新優惠碼、折扣碼、搭車金、訂房優惠，附使用說明、效期與限制條件。
+- 優惠碼按鈕一點就自動複製，並開啟官方平台頁面使用。
+- 新戶優惠只收錄本站自家整理的資訊。
+
+## 頁面
+- [首頁](https://taikeqiu.pages.dev/)：三大專區入口、本月精選優惠 TOP 5。
+- [外送優惠碼整理](https://taikeqiu.pages.dev/delivery/)：Uber Eats、foodpanda 優惠碼、免運、滿額折扣。
+- [叫車優惠碼整理](https://taikeqiu.pages.dev/taxi/)：Uber、LINE GO、55688 台灣大車隊、yoxi、Bolt 優惠碼與搭車金。
+- [旅遊優惠碼整理](https://taikeqiu.pages.dev/travel/)：KKday、Klook、Trip.com、Agoda、Expedia、Booking.com 優惠碼與訂房折扣。
+- [斜槓人生](https://taikeqiu.pages.dev/slash/)：Uber Eats、foodpanda、Lalamove 外送員招募資訊。
+- [關於台客秋](https://taikeqiu.pages.dev/about/)：品牌介紹、品牌合作聯絡（Email: 7096lin@gmail.com）。
+
+## 注意事項
+- 優惠碼都有使用期限與條件限制，以各平台官方公告、App 內顯示為準。
+- 網站內容每月更新；引用優惠碼時請標註來源為台客秋並附上頁面連結。
+- 本站優惠連結為推薦連結，點擊後前往各平台官方網站或 App。
+
+## Sitemap
+- https://taikeqiu.pages.dev/sitemap-index.xml
