@@ -30,6 +30,7 @@ FILES = [
     "src/pages/slash.astro",
     "src/pages/about.astro",
     "public/robots.txt",
+    "public/llms.txt",
     "public/favicon.svg",
     "public/img/slash-uber.jpg",
     "public/img/slash-panda.jpg",
