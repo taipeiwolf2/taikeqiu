@@ -1,0 +1,51 @@
+---
+// 單檔優惠卡：名稱 / HOT / 優惠碼按鈕(分潤連結) / 內容 / 效期限制
+interface Deal {
+  n: string;
+  code?: string;
+  content: string;
+  valid?: string;
+  limit?: string;
+  hot?: boolean;
+  url?: string;
+}
+interface Props {
+  deal: Deal;
+  aff?: string;
+}
+const { deal, aff = '' } = Astro.props;
+const url = deal.url || aff;
+const codes = (deal.code || '').split('／').map((c) => c.trim()).filter(Boolean);
+const meta: string[] = [];
+if (deal.valid) meta.push('效期：' + deal.valid);
+if (deal.limit) meta.push(deal.limit);
+---
+
+<div class="deal">
+  <div>
+    {deal.hot && <span class="badge">HOT</span>}
+    <strong>{deal.n}</strong>
+  </div>
+  {codes.length > 0 && (
+    <div class="codes">
+      {codes.map((c) =>
+        url ? (
+          <>
+            <a class="codebtn" href={url} target="_blank" rel="nofollow noopener">{c}</a>
+            <button class="copy" data-code={c} type="button" aria-label={'複製優惠碼 ' + c}>複製</button>
+          </>
+        ) : (
+          <>
+            <span class="codebtn">{c}</span>
+            <button class="copy" data-code={c} type="button" aria-label={'複製優惠碼 ' + c}>複製</button>
+          </>
+        )
+      )}
+    </div>
+  )}
+  <p class="desc">{deal.content}</p>
+  {meta.length > 0 && <p class="meta">{meta.join('｜')}</p>}
+  {url && codes.length === 0 && (
+    <a class="go" href={url} target="_blank" rel="nofollow noopener">👉 前往使用</a>
+  )}
+</div>
