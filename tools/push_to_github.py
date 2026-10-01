@@ -28,6 +28,7 @@ FILES = [
     "src/pages/index.astro",
     "src/pages/[category].astro",
     "src/pages/slash.astro",
+    "src/pages/about.astro",
     "public/robots.txt",
     "public/favicon.svg",
     "public/img/slash-uber.jpg",
