@@ -17,6 +17,7 @@ if (!cat) throw new Error('unknown category: ' + category);
   description={cat.seo.seoDesc}
   path={`/${cat.slug}/`}
 >
+  <div class={`catpage cat-${cat.slug}`}>
   <h1>{cat.seo.h1}</h1>
   <p class="lede">{cat.seo.intro_seo}</p>
   <p class="meta-line">
@@ -32,7 +33,7 @@ if (!cat) throw new Error('unknown category: ' + category);
           <>
             <h3 class="sec">{sec.title}</h3>
             {sec.deals.map((d: any) => (
-              <DealCard deal={d} aff={pf.aff || ''} />
+              <DealCard deal={d} aff={pf.aff || ''} cat={cat.slug} />
             ))}
           </>
         ))}
@@ -48,6 +49,7 @@ if (!cat) throw new Error('unknown category: ' + category);
       </>
     ))} 專區。
   </p>
+  </div>
 </Layout>
 
 <style>
