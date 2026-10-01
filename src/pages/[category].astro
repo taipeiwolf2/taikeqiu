@@ -22,6 +22,7 @@ if (!cat) throw new Error('unknown category: ' + category);
   <p class="meta-line">
     共 {cat.dealCount} 檔優惠｜最後更新：{data.updated}
   </p>
+  <img class="cat-img" src={`/img/cat-${cat.slug}.jpg`} alt={`${cat.title}吉祥物插畫：台客秋大叔`} fetchpriority="high" />
 
   {cat.platforms.map((pf: any) => (
     <section class="panel">
@@ -48,3 +49,11 @@ if (!cat) throw new Error('unknown category: ' + category);
     ))} 專區。
   </p>
 </Layout>
+
+<style>
+  .cat-img {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 14px; margin: 4px 0 20px;
+    box-shadow: 0 8px 24px rgba(124, 45, 18, 0.18);
+  }
+</style>
