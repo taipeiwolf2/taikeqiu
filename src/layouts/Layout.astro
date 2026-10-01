@@ -85,12 +85,13 @@ const nav = [
 
       /* ===== 頁首 ===== */
       header.site {
-        background: linear-gradient(115deg, #7c2d12 0%, #c2410c 55%, #ea580c 100%);
+        background: linear-gradient(115deg, #241105 0%, #431407 60%, #5a1f0a 100%);
         color: #fff;
         position: sticky;
         top: 0;
         z-index: 10;
-        box-shadow: 0 2px 12px rgba(124, 45, 18, 0.3);
+        box-shadow: 0 2px 12px rgba(20, 8, 2, 0.45);
+        border-bottom: 2px solid var(--gold);
       }
       header.site .wrap {
         display: flex;
@@ -183,12 +184,15 @@ const nav = [
       .hero {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(135deg, #7c2d12 0%, #c2410c 55%, #ea580c 100%);
+        background:
+          radial-gradient(600px 300px at 85% 10%, rgba(245, 158, 11, 0.22), transparent 70%),
+          linear-gradient(135deg, #241105 0%, #431407 55%, #5c220c 100%);
         color: #fff;
         border-radius: 18px;
         padding: 36px 30px 30px;
         margin: 24px 0 12px;
-        box-shadow: 0 10px 28px rgba(124, 45, 18, 0.28);
+        box-shadow: 0 10px 28px rgba(20, 8, 2, 0.4);
+        border: 1px solid rgba(245, 158, 11, 0.25);
       }
       .hero::before {
         content: '';
@@ -289,9 +293,10 @@ const nav = [
       .slash-banner {
         display: flex; align-items: center; gap: 18px;
         margin: 8px 0 34px; padding: 22px 26px;
-        background: linear-gradient(120deg, #7c2d12 0%, #c2410c 55%, #ea580c 100%);
+        background: linear-gradient(120deg, #241105 0%, #431407 60%, #5a1f0a 100%);
+        border: 1px solid rgba(245, 158, 11, 0.25);
         border-radius: var(--radius); color: #fff; text-decoration: none;
-        box-shadow: 0 10px 24px rgba(124, 45, 18, 0.28);
+        box-shadow: 0 10px 24px rgba(20, 8, 2, 0.35);
         transition: transform 0.18s ease, box-shadow 0.18s ease;
       }
       .slash-banner:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(124, 45, 18, 0.34); }
