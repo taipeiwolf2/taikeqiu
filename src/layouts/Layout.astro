@@ -59,6 +59,13 @@ const nav = [
         --muted: #78716c;
         --faint: #a8a29e;
         --line: #f0e2cd;
+        /* ===== 經典台客三原色 ===== */
+        --tk-red: #c8102e; /* 辦桌紅：外送 */
+        --tk-pink: #f7a8bc; /* 塑料粉 */
+        --tk-yellow: #e9a800; /* 金牌黃：叫車 */
+        --tk-green: #0e7a3d; /* 台啤綠 */
+        --tk-blue: #1b6fb8; /* 經典藍：旅遊 */
+        --tk-pwhite: #edf1f4; /* 塑料白 */
         --radius: 14px;
         --shadow: 0 2px 14px rgba(124, 45, 18, 0.08);
       }
@@ -261,6 +268,21 @@ const nav = [
       .card h2 { color: var(--brand-deep); font-size: 20px; margin: 6px 0 4px; }
       .card p { margin: 4px 0; font-size: 14px; color: var(--muted); }
       .card .count { font-weight: 800; color: var(--brand); font-size: 16px; }
+      /* 三大專區卡片頂線：台客三原色 */
+      .card.cat-delivery { border-top-color: var(--tk-red); }
+      .card.cat-taxi { border-top-color: var(--tk-yellow); }
+      .card.cat-travel { border-top-color: var(--tk-blue); }
+      /* Hero 分類 chips：台客三原色 */
+      .chip.cat-delivery { background: var(--tk-red); border-color: rgba(255, 255, 255, 0.5); }
+      .chip.cat-taxi { background: var(--tk-yellow); border-color: rgba(255, 255, 255, 0.5); color: #431407; }
+      .chip.cat-travel { background: var(--tk-blue); border-color: rgba(255, 255, 255, 0.5); }
+      /* 分類頁標題點綴：台客三原色 */
+      .catpage.cat-delivery h2.plat::before { background: var(--tk-red); }
+      .catpage.cat-taxi h2.plat::before { background: var(--tk-yellow); }
+      .catpage.cat-travel h2.plat::before { background: var(--tk-blue); }
+      .catpage.cat-delivery h2.plat { color: var(--tk-red); }
+      .catpage.cat-taxi h2.plat { color: #b57e00; }
+      .catpage.cat-travel h2.plat { color: var(--tk-blue); }
       .card .more { color: var(--brand-dark); font-weight: 700; }
 
       /* ===== 斜槓人生橫幅 ===== */
@@ -407,6 +429,21 @@ const nav = [
         letter-spacing: 1px;
       }
       .go:hover { filter: brightness(1.08); }
+      /* 一鍵複製並前往分潤連結 */
+      .copygo {
+        display: inline-flex; flex-direction: column; align-items: center; gap: 2px;
+        border: none; cursor: pointer; color: #fff; font-weight: 800;
+        border-radius: 12px; padding: 8px 24px; margin: 6px 8px 2px 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); letter-spacing: 1px;
+        transition: transform 0.12s ease, filter 0.12s ease;
+        background: linear-gradient(180deg, #ea580c, var(--brand));
+      }
+      .copygo:hover { filter: brightness(1.1); transform: translateY(-1px); }
+      .copygo .cg-code { font-size: 19px; letter-spacing: 2px; }
+      .copygo .cg-hint { font-size: 12px; font-weight: 600; opacity: 0.93; }
+      .copygo.cat-delivery { background: linear-gradient(180deg, #d81f3c, var(--tk-red)); }
+      .copygo.cat-taxi { background: linear-gradient(180deg, #f2b705, var(--tk-yellow)); }
+      .copygo.cat-travel { background: linear-gradient(180deg, #2383c9, var(--tk-blue)); }
 
       /* ===== 頁尾 ===== */
       footer.site {
@@ -489,6 +526,33 @@ const nav = [
           document.body.removeChild(t);
           done();
         }
+      });
+      // 優惠碼一鍵複製並前往分潤連結
+      document.addEventListener('click', function (e) {
+        var g = e.target.closest('.copygo');
+        if (!g) return;
+        var code = g.getAttribute('data-code') || '';
+        var aff = g.getAttribute('data-aff') || '';
+        var hint = g.querySelector('.cg-hint');
+        var hintText = '📋 一鍵複製並前往 →';
+        var done = function () {
+          if (hint) {
+            hint.textContent = '✅ 已複製！正在前往…';
+            setTimeout(function () { hint.textContent = hintText; }, 2500);
+          }
+        };
+        var go = function () { if (aff) window.open(aff, '_blank', 'noopener'); };
+        if (code && navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(function () { done(); go(); }, function () { done(); go(); });
+        } else if (code) {
+          var t = document.createElement('textarea');
+          t.value = code;
+          document.body.appendChild(t);
+          t.select();
+          try { document.execCommand('copy'); } catch (err) {}
+          document.body.removeChild(t);
+          done(); go();
+        } else { go(); }
       });
     </script>
   </body>
