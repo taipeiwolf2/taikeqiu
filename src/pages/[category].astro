@@ -10,12 +10,45 @@ export function getStaticPaths() {
 const { category } = Astro.params;
 const cat = data.categories.find((c) => c.slug === category);
 if (!cat) throw new Error('unknown category: ' + category);
+
+// AEO／SEO 常見問題（頁面可見文字須與下方 FAQPage JSON-LD 一致）
+const FAQS: Record<string, { q: string; a: string }[]> = {
+  delivery: [
+    { q: 'Uber Eats 優惠碼要在哪裡輸入？', a: '在 Uber Eats App 結帳頁的優惠欄位輸入。點本站的優惠碼按鈕會自動複製優惠碼，再到 App 貼上即可。' },
+    { q: 'foodpanda 優惠碼有使用門檻嗎？', a: '每組優惠碼的低消金額、適用店家和地區都不同，優惠卡上會標示限制條件，結帳前請先確認符合門檻。' },
+    { q: '優惠碼不能用怎麼辦？', a: '先確認是否過期、是否符合低消與適用地區或店家；同一帳號通常每組碼只能使用一次。若都符合仍無法使用，以 App 內顯示與官方公告為準。' },
+    { q: '台客秋的外送優惠碼多久更新一次？', a: '每月更新。優惠碼都有使用期限，過期或額滿的會下架，看到喜歡的建議先用。' },
+  ],
+  taxi: [
+    { q: '叫車優惠碼怎麼用？', a: '在各叫車 App 的優惠碼或搭車金欄位輸入，點本站的優惠碼按鈕會自動複製，再到 App 貼上即可折抵車資。' },
+    { q: '新戶搭車金是什麼？', a: '各叫車平台給新註冊用戶的乘車優惠，通常是折扣碼或自動派發的搭車券，需要完成註冊驗證才能使用。' },
+    { q: '優惠碼有地區限制嗎？', a: '有，部分優惠碼限定特定縣市、場站或車種，使用前請看優惠卡上的限制說明。' },
+    { q: '搭車金跟優惠碼可以一起用嗎？', a: '多數平台一次結帳只能擇一使用，實際以 App 結帳頁顯示的折抵金額為準。' },
+  ],
+  travel: [
+    { q: 'KKday／Klook 優惠碼怎麼用？', a: '在官網或 App 結帳時輸入優惠碼，系統會自動折抵。點本站的優惠碼按鈕會自動複製，再去結帳頁貼上即可。' },
+    { q: 'Agoda 訂房優惠怎麼拿？', a: '透過本站的優惠連結前往 Agoda 即可享優惠房價；部分信用卡卡友另有專屬優惠碼，在結帳前輸入。' },
+    { q: '優惠碼可以跟會員價疊加嗎？', a: '多數情況下不行，平台通常只取最優惠的一種結算，實際以結帳頁顯示金額為準。' },
+    { q: '旅遊優惠碼有使用期限嗎？', a: '有，每組優惠碼都有活動期間，規劃行程前請先確認效期，過期就不能用了。' },
+  ],
+};
+const faqs = FAQS[cat.slug] ?? [];
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <Layout
   title={cat.seo.seoTitle}
   description={cat.seo.seoDesc}
   path={`/${cat.slug}/`}
+  jsonld={faqJsonLd}
 >
   <div class={`catpage cat-${cat.slug}`}>
   <h1>{cat.seo.h1}</h1>
@@ -40,6 +73,20 @@ if (!cat) throw new Error('unknown category: ' + category);
       </div>
     </section>
   ))}
+
+  {faqs.length > 0 && (
+    <section class="faq panel">
+      <h2 class="plat">常見問題</h2>
+      <div class="panel-body">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  )}
 
   <p class="xlink">
     想看其他優惠？去 <a href="/">台客秋首頁</a> 逛逛，
