@@ -30,6 +30,9 @@ FILES = [
     "src/pages/slash.astro",
     "public/robots.txt",
     "public/favicon.svg",
+    "public/img/slash-uber.jpg",
+    "public/img/slash-panda.jpg",
+    "public/img/slash-lala.jpg",
     "tools/build_promos.py",
     "tools/push_to_github.py",
 ]
