@@ -27,6 +27,7 @@ FILES = [
     "src/components/DealCard.astro",
     "src/pages/index.astro",
     "src/pages/[category].astro",
+    "src/pages/slash.astro",
     "public/robots.txt",
     "public/favicon.svg",
     "tools/build_promos.py",
