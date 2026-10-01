@@ -12,9 +12,11 @@ interface Deal {
 interface Props {
   deal: Deal;
   aff?: string;
+  cat?: string;
 }
-const { deal, aff = '' } = Astro.props;
+const { deal, aff = '', cat = '' } = Astro.props;
 const url = deal.url || aff;
+const catCls = cat ? ' cat-' + cat : '';
 const codes = (deal.code || '').split('／').map((c) => c.trim()).filter(Boolean);
 const meta: string[] = [];
 if (deal.valid) meta.push('效期：' + deal.valid);
@@ -30,10 +32,10 @@ if (deal.limit) meta.push(deal.limit);
     <div class="codes">
       {codes.map((c) =>
         url ? (
-          <>
-            <a class="codebtn" href={url} target="_blank" rel="nofollow noopener">{c}</a>
-            <button class="copy" data-code={c} type="button" aria-label={'複製優惠碼 ' + c}>複製</button>
-          </>
+          <button class={'copygo' + catCls} data-code={c} data-aff={url} type="button" aria-label={'複製優惠碼並前往：' + c}>
+            <span class="cg-code">{c}</span>
+            <span class="cg-hint">📋 一鍵複製並前往 →</span>
+          </button>
         ) : (
           <>
             <span class="codebtn">{c}</span>
