@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from '../data/promos.json';
+
+const affOf = (platform: string): string => {
+  for (const c of data.categories)
+    for (const p of c.platforms)
+      if (p.name === platform && (p as any).aff) return (p as any).aff;
+  return '';
+};
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: '台客秋',
+  url: 'https://taikeqiu.pages.dev/',
+  description: data.homeSeo.seoDesc,
+};
+---
+
+<Layout
+  title={data.homeSeo.seoTitle}
+  description={data.homeSeo.seoDesc}
+  path="/"
+  jsonld={jsonld}
+>
+  <div class="hero">
+    <h1>{data.homeSeo.h1}</h1>
+    <p class="lede">
+      台客秋是阿叔每月親手更新的優惠碼整理小站。Uber Eats 優惠碼、foodpanda
+      優惠碼、外送免運、叫車搭車金、KKday 優惠碼、Klook 優惠碼、Agoda
+      訂房優惠、Trip.com 折扣碼，通通幫你挖出來——點了就有省，免驚踩雷。
+    </p>
+    <p>本月精選：會員十月享（Uber One 會員滿 450 元享 0 元外送費）、十點七五（基隆滿 149 元享 75 折）、930回家（叫車新戶首趟最高折 200 元）。</p>
+  </div>
+
+  <h2 class="plat">■ 最新 TOP 5 優惠</h2>
+  <div class="tablewrap">
+    <table class="top5">
+      <tr><th>排名</th><th>平台</th><th>優惠</th><th>優惠碼</th></tr>
+      {data.top5.map((it: any) => {
+        const aff = affOf(it.platform);
+        return (
+          <tr>
+            <td><span class="rank">{it.rank}</span></td>
+            <td>{it.platform}</td>
+            <td>{it.title}</td>
+            <td>
+              {aff ? (
+                <a class="codebtn" href={aff} target="_blank" rel="nofollow noopener">{it.code}</a>
+              ) : (
+                <span class="codebtn">{it.code}</span>
+              )}
+            </td>
+          </tr>
+        );
+      })}
+    </table>
+  </div>
+  <p style="font-size:13px;color:#a8a29e">完整 {data.total} 檔優惠請進三大專區慢慢挖。</p>
+
+  <h2 class="plat">■ 三大專區</h2>
+  <div class="cards">
+    {data.categories.map((c) => (
+      <a class="card" href={`/${c.slug}/`}>
+        <h2>{c.title}</h2>
+        <p>{c.intro}</p>
+        <p><span class="count">{c.dealCount} 檔優惠</span> → 進去挖寶</p>
+      </a>
+    ))}
+  </div>
+
+  <h2 class="plat">■ 這個站是幹嘛的</h2>
+  <p>
+    台客秋是個人經營的優惠整理小站，專收台灣常用的外送、叫車、旅遊優惠碼。
+    外送找 <a href="/delivery/">Uber Eats 優惠碼、foodpanda 優惠碼</a>，
+    出門找 <a href="/taxi/">Uber、LINE GO、55688 叫車優惠</a>，
+    出遊找 <a href="/travel/">KKday、Klook、Agoda 旅遊優惠碼</a>。
+    每月更新，優惠碼點了直接連官方 App 或官網使用。
+  </p>
+</Layout>
