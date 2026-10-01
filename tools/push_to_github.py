@@ -33,6 +33,10 @@ FILES = [
     "public/img/slash-uber.jpg",
     "public/img/slash-panda.jpg",
     "public/img/slash-lala.jpg",
+    "public/img/hero-mascot.jpg",
+    "public/img/cat-delivery.jpg",
+    "public/img/cat-taxi.jpg",
+    "public/img/cat-travel.jpg",
     "tools/build_promos.py",
     "tools/push_to_github.py",
 ]
