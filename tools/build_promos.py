@@ -3,6 +3,7 @@
 """台客秋 — 把 deals-sync 的 Python 資料庫轉成 Astro 用的 promos.json"""
 import json
 import os
+import re
 import sys
 import datetime
 
@@ -68,18 +69,47 @@ def merge_auto(page, key, auto):
         pf["sections"].append({"title": "自動更新", "deals": deals})
 
 
+RETIRED_PATH = os.path.expanduser("~/workspace/deals-sync/retired_codes.txt")
+
+
+def load_retired():
+    if not os.path.exists(RETIRED_PATH):
+        return set()
+    with open(RETIRED_PATH, encoding="utf-8") as f:
+        return {l.strip() for l in f if l.strip()}
+
+
+def norm_code(c):
+    c = (c or "").strip()
+    return c.upper() if re.fullmatch(r"[A-Za-z0-9]+", c) else c
+
+
+def filter_retired(page, retired):
+    """濾掉已下架（過期）的優惠碼；原始 deals_*.py 保留歷史"""
+    if not retired:
+        return
+    for pf in page["platforms"]:
+        for sec in pf["sections"]:
+            sec["deals"] = [
+                d for d in sec["deals"]
+                if not (set(norm_code(c) for c in (d.get("code") or "").split("／") if c.strip()) & retired)
+            ]
+
+
 def main():
     out = {
         "site": {"name": SITE["name"], "source_name": SITE["source_name"]},
-        "updated": datetime.date.today().isoformat(),
+        "updated": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).date().isoformat(),
         "top5": HOME_TOP5,
         "footer": FOOTER_TEXT,
         "categories": [],
     }
     total = 0
     auto = load_auto()
+    retired = load_retired()
     for key, page in (("delivery", DELIVERY), ("taxi", TAXI), ("travel", TRAVEL)):
         merge_auto(page, key, auto)
+        filter_retired(page, retired)
         n = count_deals(page)
         total += n
         out["categories"].append({
