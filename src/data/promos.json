@@ -3,7 +3,7 @@
   "name": "台客秋",
   "source_name": "kb56.tw（鍵盤五六）"
  },
- "updated": "2026-10-01",
+ "updated": "2026-10-02",
  "top5": [
   {
    "rank": 1,
@@ -43,7 +43,7 @@
    "slug": "delivery",
    "title": "外送呷飽",
    "intro": "肚子餓不用忍！外送優惠碼、免運、買一送一，大叔幫你整理好，點一點就省一筆。",
-   "dealCount": 81,
+   "dealCount": 118,
    "seo": {
     "slug": "delivery",
     "seoTitle": "外送優惠碼整理｜Uber Eats、foodpanda 優惠碼 - 台客秋",
@@ -346,6 +346,13 @@
          "limit": "宜蘭縣"
         },
         {
+         "n": "十要六折",
+         "code": "十要六折",
+         "content": "滿 $149 享 6 折，最高折抵 $60，每帳號限用 1 次",
+         "valid": "10/1~10/15",
+         "limit": "台南市全區；美食外送／外帶"
+        },
+        {
          "n": "十好七五",
          "code": "十好七五",
          "content": "滿 $149 享 75 折，最高折抵 $40",
@@ -365,6 +372,13 @@
          "content": "滿 $149 享 75 折，最高折抵 $40",
          "valid": "10/1~10/15",
          "limit": "澎湖縣"
+        },
+        {
+         "n": "十省七五",
+         "code": "十省七五",
+         "content": "滿 $149 享 75 折，最高折抵 $40，每帳號限用 1 次",
+         "valid": "10/1~10/15",
+         "limit": "金門縣全區；美食外送／外帶"
         }
        ]
       },
@@ -640,6 +654,159 @@
          "limit": "學生、企業用戶"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "指定餐廳滿$260折$80／滿$360折$110",
+         "code": "爽爽送",
+         "content": "精選餐廳美食外送滿$260現折$80、滿$360現折$110，數量有限",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1 ~ 10/31",
+         "limit": "指定餐廳",
+         "hot": true
+        },
+        {
+         "n": "pandapro精選餐廳滿$299享85折",
+         "code": "美食感謝祭",
+         "content": "pandapro會員於精選餐廳消費滿$299享85折，最高折$45，每人限用2次",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1 ~ 10/31",
+         "limit": "pandapro會員"
+        },
+        {
+         "n": "pandapro滿$99享100%胖達幣回饋",
+         "code": "爽食感謝祭",
+         "content": "pandapro會員美食外送／外帶自取滿$99享100%胖達幣回饋，最高100胖達幣，每人限用1次",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/8 ~ 10/11",
+         "limit": "pandapro會員"
+        },
+        {
+         "n": "pandapro會員免費兌換7-11特大杯冰咖啡",
+         "code": "咖啡請你喝",
+         "content": "pandapro會員使用外帶自取，在7-11指定專區免費兌換特選大杯冰咖啡，每人可用1次",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1 ~ 10/15",
+         "limit": "pandapro會員、外帶自取、7-11指定專區"
+        },
+        {
+         "n": "pandapro會員免費兌換統一超商莊園美式中杯",
+         "code": "請你喝路易莎",
+         "content": "pandapro會員使用外帶自取，在統一超商指定專區免費兌換莊園美式（中杯），每人可用1次",
+         "auto": true,
+         "auto_source": "https://supertaste.tvbs.com.tw/amp/food/361747",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/16 ~ 10/31",
+         "limit": "pandapro會員、外帶自取、統一超商指定專區"
+        },
+        {
+         "n": "星巴克每週二指定專區滿$279現折$70",
+         "code": "週二星享日",
+         "content": "每週二於星巴克限時優惠專區消費滿$279現折$70",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "~2026/12/31",
+         "limit": "每週二、星巴克指定專區、部分門市不適用"
+        },
+        {
+         "n": "自取感謝祭：精選餐廳滿$100享5折",
+         "code": "自取感謝祭",
+         "content": "精選餐廳外帶自取滿$100享5折，最高折抵$60",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1 ~ 10/31",
+         "limit": "指定用戶、外帶自取"
+        },
+        {
+         "n": "生鮮感謝祭：生鮮雜貨指定店家最高6折",
+         "code": "生鮮感謝祭",
+         "content": "指定店家消費滿$299享2次88折（最高折$40）；滿$399享1次6折（最高折$200）",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1 ~ 10/31",
+         "limit": "指定店家、生鮮雜貨"
+        },
+        {
+         "n": "團購訂單滿$1000折$200",
+         "code": "GP200",
+         "content": "團購訂單滿$1000折$200，每人可用1次，兌完為止",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "兌完為止"
+        },
+        {
+         "n": "中信LinePay卡早餐時段滿$200折$15",
+         "code": "psctbce602",
+         "content": "早餐時段（5:30-11:00）單筆滿$200現折$15，每人每月1次，每月限量800組",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "中信LinePay卡；代碼最後一碼隨月份調整（10月請以kb56.tw頁面公告為準）"
+        },
+        {
+         "n": "中信LinePay卡每月滿$260折$20",
+         "code": "psctbc602",
+         "content": "單筆滿$260現折$20，每人每月1次，每月限量1400組",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "中信LinePay卡；代碼後一碼隨月份調整"
+        },
+        {
+         "n": "pandapro再次訂閱月費制享5折",
+         "code": "back50",
+         "content": "再次訂閱pandapro月費制享5折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "非訂閱會員"
+        },
+        {
+         "n": "pandapro年費制享8折",
+         "code": "PROFP5",
+         "content": "訂閱pandapro年費制享8折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準"
+        },
+        {
+         "n": "pandapro月費制首月0元",
+         "code": "FREE1M",
+         "content": "訂閱pandapro月費制享首月0元",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/mpay/detail.php?35121",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準"
+        },
+        {
+         "n": "中信LINE Pay卡新戶首購最高折$250",
+         "code": "psctbclp26",
+         "content": "中信LINE Pay卡新戶：美食外送滿$99享3折最高折$200、生鮮雜貨滿$300享3折最高折$250，二擇一",
+         "auto": true,
+         "auto_source": "https://kb56.tw/foodpanda-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "~2026/12/31",
+         "limit": "中信LINE Pay卡新戶"
+        }
+       ]
       }
      ]
     },
@@ -693,6 +860,211 @@
          "limit": "官小二酸菜魚"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "指定店家滿$99享59折",
+         "code": "五九開吃",
+         "content": "指定店家消費滿$99享1次59折優惠，最高折抵$59",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "指定店家及符合資格帳號"
+        },
+        {
+         "n": "指定店家滿$99享69折",
+         "code": "六九開吃",
+         "content": "指定店家消費滿$99享1次69折優惠，最高折抵$69",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "指定店家及符合資格帳號"
+        },
+        {
+         "n": "指定店家滿$99享79折",
+         "code": "七九開吃",
+         "content": "指定店家消費滿$99享1次79折優惠，最高折抵$79",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "指定店家及符合資格帳號"
+        },
+        {
+         "n": "指定店家滿$99享89折",
+         "code": "八九開吃",
+         "content": "指定店家消費滿$99享1次89折優惠，最高折抵$89",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "指定店家及符合資格帳號"
+        },
+        {
+         "n": "指定店家滿$349現折$45",
+         "code": "十月快樂",
+         "content": "指定店家消費滿$349現折$45，每人可用3次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/14",
+         "limit": "指定活動店家"
+        },
+        {
+         "n": "指定店家滿$359享89折最高折$100",
+         "code": "團圓烤起來",
+         "content": "指定店家消費滿$359享3次89折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/12",
+         "limit": "指定活動店家"
+        },
+        {
+         "n": "7-ELEVEN滿$299享95折最高折$100",
+         "code": "好想吃火鍋",
+         "content": "7-ELEVEN消費滿$299享5次95折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "7-ELEVEN指定商品或店家"
+        },
+        {
+         "n": "7-ELEVEN滿$319享9折最高折$100",
+         "code": "入秋享好康",
+         "content": "7-ELEVEN消費滿$319享3次9折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/04",
+         "limit": "7-ELEVEN指定商品或店家"
+        },
+        {
+         "n": "21Plus等連鎖滿$199享85折最高折$60",
+         "code": "十月吃貨",
+         "content": "21Plus、21風味館、Mister Donut、Cold Stone酷聖石、Semeur聖娜消費滿$199享5次85折優惠，最高折抵$60",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "指定連鎖品牌"
+        },
+        {
+         "n": "三顧茅廬滿$249現折$70",
+         "code": "初嚐三顧省70",
+         "content": "三顧茅廬指定門市消費滿$249現折$70，每人可用5次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "三顧茅廬指定門市"
+        },
+        {
+         "n": "南機場夜市滿$299現折$100",
+         "code": "南機場吃飽飽",
+         "content": "南機場夜市指定商家消費滿$299現折$100，每人可用3次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "南機場夜市指定商家"
+        },
+        {
+         "n": "鳳城燒臘滿$300現折$50",
+         "code": "鳳城嚐鮮券",
+         "content": "鳳城燒臘指定門市消費滿$300現折$50，每人可用3次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "鳳城燒臘指定門市"
+        },
+        {
+         "n": "官小二酸菜魚滿$250現折$50",
+         "code": "魚躍五十",
+         "content": "官小二酸菜魚指定門市消費滿$250現折$50，每人可用3次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/03",
+         "limit": "官小二酸菜魚指定門市"
+        },
+        {
+         "n": "Pizza Rock滿$500現折$100",
+         "code": "搖滾初登場",
+         "content": "Pizza Rock搖滾披薩消費滿$500現折$100，每人可用5次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "Pizza Rock搖滾披薩"
+        },
+        {
+         "n": "三花滿$999享75折最高折$500",
+         "code": "三花享穿",
+         "content": "三花指定門市消費滿$999享1次75折優惠，最高折抵$500",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "三花指定門市"
+        },
+        {
+         "n": "萬家福滿$999享88折最高折$120",
+         "code": "萬家有福",
+         "content": "萬家福消費滿$999享2次88折優惠，最高折抵$120",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "萬家福"
+        },
+        {
+         "n": "樂家康超市滿$599享88折最高折$100",
+         "code": "家樂購",
+         "content": "樂家康超市消費滿$599享2次88折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "樂家康超市指定商品或門市"
+        },
+        {
+         "n": "寵物公園滿$799現折$150",
+         "code": "寵愛動物日",
+         "content": "寵物公園指定商品消費滿$799現折$150，每人限用1次",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/04",
+         "limit": "寵物公園指定商品"
+        },
+        {
+         "n": "康是美滿$488享88折最高折$100",
+         "code": "十月享好康",
+         "content": "康是美指定商品消費滿$488享2次88折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "康是美指定商品"
+        },
+        {
+         "n": "丁丁藥局滿$499享8折最高折$100",
+         "code": "丁丁新登場",
+         "content": "丁丁藥局指定商品或門市消費滿$499享3次8折優惠，最高折抵$100",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/foodomo%E5%84%AA%E6%83%A0%E7%A2%BC/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "丁丁藥局指定商品或門市"
+        }
+       ]
       }
      ]
     }
@@ -703,7 +1075,7 @@
    "slug": "taxi",
    "title": "車拼叫車",
    "intro": "出門免煩惱！叫車優惠碼、新戶搭車金，大叔幫你整理好，上車就省錢。",
-   "dealCount": 32,
+   "dealCount": 43,
    "seo": {
     "slug": "taxi",
     "seoTitle": "叫車優惠碼整理｜Uber、LINE GO、55688 搭車金 - 台客秋",
@@ -778,6 +1150,61 @@
          "limit": "永豐信用卡新戶"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "舊戶 2 趟 8 折乘車優惠、最高折 40 元",
+         "code": "UBERWOW26",
+         "content": "舊戶享 2 趟 8 折乘車優惠，每趟最高折 40 元",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/uber-promo-code/comment-page-1/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "舊戶"
+        },
+        {
+         "n": "桃園國際機場 2 趟 85 折機場乘車優惠",
+         "code": "CTAIRPORT25",
+         "content": "桃園國際機場 2 趟 85 折乘車優惠，單次最高折 100 元；可用於前往桃機或往返松山、清泉崗、台南、小港機場",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/uber-promo-code/comment-page-1/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "不適用桃園機場接機"
+        },
+        {
+         "n": "優快送 1 趟 300 元優惠",
+         "code": "1COURIERTW26",
+         "content": "優快送 1 趟 300 元優惠",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/uber-promo-code/comment-page-1/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31"
+        },
+        {
+         "n": "雲林／花蓮／台東 優快送首趟 300 元優惠",
+         "code": "雲花東優快送",
+         "content": "雲林、花蓮、台東地區優快送首趟 300 元優惠",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/uber-promo-code/comment-page-1/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "限雲林／花蓮／台東地區"
+        },
+        {
+         "n": "新用戶首趟最高折 200 元（kb56.tw 自家，數量有限）",
+         "code": "TL26TP",
+         "content": "新用戶首趟最高折 200 元",
+         "auto": true,
+         "auto_source": "https://kb56.tw/uber-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "新用戶；數量有限",
+         "hot": true
+        }
+       ]
       }
      ]
     },
@@ -838,6 +1265,32 @@
          "limit": "永豐 Green 卡／聯邦幸福 M 卡"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "三週年優惠碼「聊不夠」領 333 元乘車金",
+         "code": "聊不夠",
+         "content": "LINE GO 三週年活動，輸入中文優惠碼領取總價值 333 元乘車金",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/line-taxi-%E5%84%AA%E6%83%A0%E7%A2%BC-%E4%B9%98%E8%BB%8A%E5%88%B8-%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%84%AA%E6%83%A0/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/11/30",
+         "limit": "每組折扣碼每人限領一次",
+         "hot": true
+        },
+        {
+         "n": "三週年第二波優惠碼「見面聊」領 333 元乘車金",
+         "code": "見面聊",
+         "content": "LINE GO 三週年第二波活動，輸入優惠碼領取總價值 333 元乘車金",
+         "auto": true,
+         "auto_source": "https://playcarcare.com/index.php/19800.html",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/01~2027/02/04",
+         "limit": "每組折扣碼每人限領一次"
+        }
+       ]
       }
      ]
     },
@@ -869,6 +1322,21 @@
          "content": "首趟 10 公里免費，最高折 $440（首次使用代駕服務）",
          "valid": "常態（數量有限）",
          "limit": "代駕新戶"
+        }
+       ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "酒後代駕新戶首趟最高折 440 元（kb56.tw 自家）",
+         "code": "G2026",
+         "content": "第一次使用代駕服務的會員在 APP 輸入代碼，可領取一張 440 元代駕金，相當於首趟前 10 公里最高折抵 440 元",
+         "auto": true,
+         "auto_source": "https://kb56.tw/55688-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "須完成會員註冊及信用卡綁定；每次行程限用一張；期限以 APP 顯示為準"
         }
        ]
       }
@@ -946,6 +1414,40 @@
          "limit": "加碼每卡每月上限 800 點"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "20 元搭車金 5 張",
+         "code": "勸你搭車",
+         "content": "20 元搭車金 5 張",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/yoxi-%e5%84%aa%e6%83%a0%e5%88%b8-%e4%bf%a1%e7%94%a8%e5%8d%a1%e5%84%aa%e6%83%a0/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31"
+        },
+        {
+         "n": "30 元搭車金 2 張",
+         "code": "忠泰看展",
+         "content": "30 元搭車金 2 張",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/yoxi-%e5%84%aa%e6%83%a0%e5%88%b8-%e4%bf%a1%e7%94%a8%e5%8d%a1%e5%84%aa%e6%83%a0/",
+         "auto_found": "2026-10-01",
+         "valid": "2027/01/31"
+        },
+        {
+         "n": "iPASS MONEY 新戶單趟折 150 元（kb56.tw 自家）",
+         "code": "iPM",
+         "content": "iPASS MONEY 新會員註冊流程輸入推薦碼，單趟折 150 元；推薦碼僅能擇一使用",
+         "auto": true,
+         "auto_source": "https://kb56.tw/yoxi-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "限使用 iPASS MONEY 綁定支付",
+         "hot": true
+        }
+       ]
       }
      ]
     },
@@ -1003,7 +1505,7 @@
    "slug": "travel",
    "title": "作夥走跳",
    "intro": "作夥走跳，玩得比人便宜！門票、住宿、機票，大叔幫你把出遊成本打下來。",
-   "dealCount": 56,
+   "dealCount": 114,
    "seo": {
     "slug": "travel",
     "seoTitle": "旅遊優惠碼整理｜KKday、Klook、Agoda 訂房優惠 - 台客秋",
@@ -1082,6 +1584,259 @@
          "content": "週一港澳中、週二釜山、週三東南亞 93 折（滿 $1,700）／台灣飯店晚鳥 9 折、週四首爾 93 折（滿 $2,500）／日本 94 折（滿 $1,000）、週五台灣 92 折（滿 $1,800）、週六歐美 94 折（滿 $6,000）、週日紐澳 93 折",
          "valid": "每週常態",
          "limit": "限指定商品；可能提前額滿"
+        }
+       ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "10月全站95折",
+         "code": "ALL95",
+         "content": "全站商品單筆不限門檻享95折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/10/25",
+         "limit": "單筆最高折抵NT$120；限量",
+         "hot": true
+        },
+        {
+         "n": "10月全站滿3000折200",
+         "code": "ALL200",
+         "content": "全站商品單筆滿$3000折$200",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/10/25",
+         "limit": "限量"
+        },
+        {
+         "n": "10月全站滿8000折600",
+         "code": "ALL600",
+         "content": "全站商品單筆滿$8000折$600",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/10/25",
+         "limit": "限量"
+        },
+        {
+         "n": "卡優專屬全站滿6000折500",
+         "code": "CARDU2694",
+         "content": "全站單筆滿$6,000折$500",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優專屬全站滿9000折800",
+         "code": "CARDU2695",
+         "content": "全站單筆滿$9,000折$800",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優專屬全站滿15000折1400",
+         "code": "CARDU2696",
+         "content": "全站單筆滿$15,000折$1,400",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優專屬全站滿30000折1800",
+         "code": "CARDU2697",
+         "content": "全站單筆滿$30,000折$1,800",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優專屬Wifi/eSIM 88折",
+         "code": "CARDU2693",
+         "content": "Wifi/eSIM享88折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "折抵上限$100；需經卡優專屬連結"
+        },
+        {
+         "n": "卡優專屬景點門票92折",
+         "code": "CARDU2691",
+         "content": "全球景點/樂園門票、一日遊、體驗滿$2,200享92折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "折抵上限$300"
+        },
+        {
+         "n": "卡優全站滿5000折400",
+         "code": "KKAFF400",
+         "content": "全站商品滿5,000折400",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優全站滿8000折700",
+         "code": "KKAFF700",
+         "content": "全站商品滿8,000折700",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優全站滿10000折1000",
+         "code": "KKAFF1000A",
+         "content": "全站商品滿$10,000折$1,000",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "卡優行程商品88折",
+         "code": "KKAFFTOUR88",
+         "content": "行程商品88折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "折抵上限$300；需經卡優專屬連結"
+        },
+        {
+         "n": "卡優全球包車早鳥9折",
+         "code": "KKCCCAR",
+         "content": "全球包車早鳥訂購享9折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "折抵上限$1,000"
+        },
+        {
+         "n": "卡優日遊行程包車滿10000折1200",
+         "code": "KKAFF1200",
+         "content": "日遊行程&包車商品滿10,000現折1,200",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "秋冬早鳥日遊體驗滿5000折600",
+         "code": "WIN600",
+         "content": "秋冬早鳥日遊體驗行程滿5000折600",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "指定秋冬早鳥商品"
+        },
+        {
+         "n": "秋冬早鳥日遊體驗滿10000折1200",
+         "code": "WIN1200",
+         "content": "秋冬早鳥日遊體驗行程滿10000折1200",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "指定秋冬早鳥商品"
+        },
+        {
+         "n": "KKday專屬包車85折",
+         "code": "KKCHARTER",
+         "content": "KKday專屬包車獨享85折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-12-30",
+         "limit": "至多抵TWD 3,000"
+        },
+        {
+         "n": "機票滿7000折300",
+         "code": "KKFLY",
+         "content": "機票滿$7,000折$300",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31"
+        },
+        {
+         "n": "機加酒滿10000折500",
+         "code": "KKFHP500",
+         "content": "機加酒商品滿10,000折500",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "釜山計畫機票滿6000折500",
+         "code": "26TKTBS2",
+         "content": "韓國釜山計畫機票滿NT$6,000折$500",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31"
+        },
+        {
+         "n": "釜山計畫機票滿11000折1000",
+         "code": "26TKTBS3",
+         "content": "韓國釜山計畫機票滿NT$11,000折$1,000",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31"
+        },
+        {
+         "n": "郵輪滿30000折2000",
+         "code": "EXCUZ2000",
+         "content": "指定郵輪商品滿30,000折2,000",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "郵輪滿50000折3000",
+         "code": "EXCUZ3000",
+         "content": "指定郵輪商品滿50,000折3,000",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "limit": "需經卡優專屬連結"
+        },
+        {
+         "n": "麗星郵輪滿10000折1000",
+         "code": "1000SUMMER",
+         "content": "麗星郵輪探索星號滿10,000折1,000",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?39409",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "指定商品"
         }
        ]
       }
@@ -1202,6 +1957,225 @@
          "limit": "限指定商品與名額"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "卡優10月全站95折",
+         "code": "CU26Q4A",
+         "content": "全站95折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?61662",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/12/31",
+         "limit": "最高折$1,000；需經卡優指定連結",
+         "hot": true
+        },
+        {
+         "n": "卡優全站滿3000折250",
+         "code": "CU26Q4B",
+         "content": "全站商品滿$3,000折$250",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?61662",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/12/31",
+         "limit": "需經卡優指定連結"
+        },
+        {
+         "n": "卡優包車機場接88折",
+         "code": "CU26Q4C",
+         "content": "全球私人包車機場接88折",
+         "auto": true,
+         "auto_source": "https://www.cardu.com.tw/epoint/detail.php?61662",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/1~2026/12/31",
+         "limit": "最高折$200；需經卡優指定連結"
+        },
+        {
+         "n": "Funliday獨家全站優惠",
+         "code": "FU26Q4A",
+         "content": "Funliday獨家全站商品優惠碼",
+         "auto": true,
+         "auto_source": "https://www.funliday.com/tw/coupons",
+         "auto_found": "2026-10-01",
+         "valid": "2026-10-31",
+         "hot": true
+        },
+        {
+         "n": "12週年慶全站96折最高折1212",
+         "code": "ALL960918",
+         "content": "12週年慶全站96折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/11",
+         "limit": "最高折$1,212",
+         "hot": true
+        },
+        {
+         "n": "12週年慶週末全站88折",
+         "code": "ALL880925",
+         "content": "週末全站88折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/11",
+         "limit": "最高折$120",
+         "hot": true
+        },
+        {
+         "n": "週日全站5折",
+         "code": "0816ALL50OFF",
+         "content": "週日晚上10點全站商品5折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "最高折$500",
+         "hot": true
+        },
+        {
+         "n": "週一全球樂園85折",
+         "code": "ATT15OFF0831",
+         "content": "週一晚上10點全球樂園85折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31"
+        },
+        {
+         "n": "關西樂享周遊券/香港機場快線買一送一",
+         "code": "HFKPB1G10914",
+         "content": "週一晚上10點關西樂享周遊券/香港機場快線買1送1",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31"
+        },
+        {
+         "n": "週三日韓商品5折",
+         "code": "0805JPKR50OFF",
+         "content": "週三晚上10點日韓商品5折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "最高折$500",
+         "hot": true
+        },
+        {
+         "n": "週三全球精選商品85折",
+         "code": "HOT850923",
+         "content": "週三晚上10點全球精選商品85折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "最高折$300"
+        },
+        {
+         "n": "精選一日遊95折",
+         "code": "TNA2026EARLYAUTUMN",
+         "content": "日本/泰國/韓國/台灣精選一日遊&特色活動95折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "最高折USD8（兩來源效期記載不一，2026/10/14或2026/11/11）"
+        },
+        {
+         "n": "東京迪士尼9折",
+         "code": "TKDL1010",
+         "content": "東京迪士尼樂園門票9折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "最高折$400",
+         "hot": true
+        },
+        {
+         "n": "JCB滿2000折200",
+         "code": "KJCB2610",
+         "content": "刷JCB指定卡單筆訂單滿2000現折200",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "限台灣JCB晶緻等級以上卡"
+        },
+        {
+         "n": "Visa海外全商品92折",
+         "code": "VISA269210",
+         "content": "海外全商品92折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "需刷Visa卡"
+        },
+        {
+         "n": "郵政Visa金融卡海外75折",
+         "code": "POSTKLBT267510",
+         "content": "全海外商品75折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "最高折抵NT$500；需刷中華郵政Visa金融卡",
+         "hot": true
+        },
+        {
+         "n": "韓國指定一日遊8折",
+         "code": "KRTOUREARLY",
+         "content": "韓國指定一日遊8折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/5",
+         "limit": "最高折$300；限出發前30天以上預訂"
+        },
+        {
+         "n": "日本指定一日遊8折",
+         "code": "JPTOUREARLY",
+         "content": "日本指定一日遊8折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/5",
+         "limit": "最高折$320"
+        },
+        {
+         "n": "歐洲交通產品9折",
+         "code": "TW10SWISS",
+         "content": "歐洲交通產品9折",
+         "auto": true,
+         "auto_source": "https://www.callingtaiwan.com.tw/klook%E5%84%AA%E6%83%A0%E7%A2%BC-kkday%E6%8A%98%E6%89%A3%E5%88%B8-%E5%AE%A2%E8%B7%AF%E5%84%AA%E6%83%A0%E6%8A%98%E5%83%B9%E4%BB%A3%E7%A2%BC-discount-code-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/18",
+         "limit": "最高折USD100"
+        },
+        {
+         "n": "日本巴士車票95折",
+         "code": "BUSLAUNCH5",
+         "content": "日本巴士車票95折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/10/31",
+         "limit": "最高折USD7"
+        },
+        {
+         "n": "StarDream郵輪92折",
+         "code": "SDC8OFFKLOOK",
+         "content": "StarDream郵輪92折優惠",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/klook-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31"
+        }
+       ]
       }
      ]
     },
@@ -1277,6 +2251,51 @@
          "limit": "限玉山指定信用卡；須線上全額預付"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "旅遊達人布萊N機票2%",
+         "code": "TRIP2FBN",
+         "content": "指定機票享2%折扣",
+         "auto": true,
+         "auto_source": "https://tw.trip.com/sale/w/5113/partneriz-kolbrian.html?allianceid=849555&sid=22215180&utm_campaign=1100l33434&trip_sub1",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "只適用機票票價，不含稅項及其他附加費"
+        },
+        {
+         "n": "旅遊達人布萊N飯店5%",
+         "code": "TRIP5HBN",
+         "content": "全球飯店預付房間享5%折扣",
+         "auto": true,
+         "auto_source": "https://tw.trip.com/sale/w/5113/partneriz-kolbrian.html?allianceid=849555&sid=22215180&utm_campaign=1100l33434&trip_sub1",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "只適用房價及稅項；不適用機加酒、套票"
+        },
+        {
+         "n": "Funliday獨家全站機票無門檻折扣",
+         "code": "FUNLIDAYTW26F",
+         "content": "Funliday獨家全站機票折扣，無門檻",
+         "auto": true,
+         "auto_source": "https://www.funliday.com/tw/coupons",
+         "auto_found": "2026-10-01",
+         "valid": "2026-12-31",
+         "hot": true
+        },
+        {
+         "n": "玉山租車新戶8%",
+         "code": "ESUNCN",
+         "content": "玉山指定信用卡首次租車且線上全額預付享8%",
+         "auto": true,
+         "auto_source": "https://kb56.tw/trip-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "限首次租車；須線上全額預付"
+        }
+       ]
       }
      ]
     },
@@ -1344,6 +2363,42 @@
          "content": "走 Agoda 卡友專屬頁｜指定全球住宿 7% OFF",
          "valid": "預訂至 2026/12/31；2027/3/31 前須完成入住",
          "limit": "須選「已套用CUBE」標籤房型；銀行端回饋另依當期權益計算"
+        }
+       ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "24小時內訂房優惠券",
+         "code": "24HOURSALE",
+         "content": "Agoda 24小時內訂房優惠券",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/agoda-promo-code-and-deals/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "領券後24小時內使用"
+        },
+        {
+         "n": "指定住宿最高8%",
+         "code": "AGODADEAL8",
+         "content": "指定住宿最高8% OFF",
+         "auto": true,
+         "auto_source": "https://kb56.tw/agoda-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "最高折抵US$50；需先確認帳號可領取",
+         "hot": true
+        },
+        {
+         "n": "指定住宿最高5%",
+         "code": "AGODADEAL5",
+         "content": "指定住宿最高5% OFF",
+         "auto": true,
+         "auto_source": "https://kb56.tw/agoda-coupon/",
+         "auto_found": "2026-10-01",
+         "valid": "以官方公告為準",
+         "limit": "最高折抵US$40；需先確認帳號可領取"
         }
        ]
       }
@@ -1480,13 +2535,68 @@
          "limit": "限台灣美國運通發行卡，企業卡除外；限線上立即付款"
         }
        ]
+      },
+      {
+       "title": "自動更新",
+       "deals": [
+        {
+         "n": "Mastercard全球飯店立折8%",
+         "code": "MASTERTW8",
+         "content": "預訂指定全球飯店立折8%",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/expedia-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2027/1/31",
+         "limit": "須刷Mastercard並用指定網址訂房"
+        },
+        {
+         "n": "VISA指定酒店92折",
+         "code": "VISAYRO",
+         "content": "預訂指定酒店可享92折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/expedia-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "限台灣VISA信用卡"
+        },
+        {
+         "n": "JCB指定酒店92折",
+         "code": "JCBTW8",
+         "content": "預訂指定酒店可享92折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/expedia-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2027/1/31",
+         "limit": "限台灣JCB卡"
+        },
+        {
+         "n": "國泰世華指定酒店92折",
+         "code": "CUBTW08H",
+         "content": "預訂全球指定酒店可享額外92折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/expedia-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "限國泰世華卡"
+        },
+        {
+         "n": "樂天飯店92折",
+         "code": "TRCTW08H",
+         "content": "預訂飯店可享92折",
+         "auto": true,
+         "auto_source": "https://vivianexplore.tw/expedia-promo-code/",
+         "auto_found": "2026-10-01",
+         "valid": "2026/12/31",
+         "limit": "限樂天信用卡"
+        }
+       ]
       }
      ]
     }
    ]
   }
  ],
- "total": 169,
+ "total": 275,
  "homeSeo": {
   "seoTitle": "台客秋｜外送、叫車、旅遊優惠碼整理",
   "seoDesc": "台客秋是每月更新的優惠碼整理小站：Uber Eats 優惠碼、foodpanda 優惠碼、叫車搭車金、KKday／Klook 優惠碼、Agoda 訂房優惠都在這，點了就有省。",
